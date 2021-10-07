@@ -19,6 +19,8 @@ public class Main {
         System.out.print("yükseklik giriniz : ");
         yukseklik = Giris.nextInt();
         Main2.yildizBoslukCizX(yukseklik);
+
+
     }
        /* System.out.println("Main call edıldi.");
         yildizCiz(10);
