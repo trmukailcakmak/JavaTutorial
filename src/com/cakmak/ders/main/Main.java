@@ -10,8 +10,6 @@ public class Main {
 
 
     public static void yildizCiz(int boyut) {
-        System.out.println("YildizCiz cagrıldı...");
-
 
     }
 
