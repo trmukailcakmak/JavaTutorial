@@ -41,7 +41,27 @@ public class Main2 {
         }
     }*/
 
-    public static void yildizBoslukCizX(int boyut) {
+    public static void yildizBoslukCizX(int yukseklik) {
+
+        for (int j = 1; j <=yukseklik ; j++) {
+            for (int i = 1; i <= yukseklik; i++) {
+                if (i == 1) {
+                    System.out.print("*");
+                } else {
+                    if (i == yukseklik) {
+                        System.out.print("");
+                    } else {
+                        System.out.print(" ");
+                    }
+                }
+                if (i == yukseklik) {
+                    System.out.print("*");
+                }
+            }
+            System.out.println();
+        }
+
+    public static void yildizBoslukCiz(int boyut) {
 
 
         for (int i = 0; i < boyut ; i++) {
