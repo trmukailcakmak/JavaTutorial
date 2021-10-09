@@ -41,82 +41,79 @@ public class Main2 {
         }
     }*/
 
+    /*
+    AAAAABBBAA
+    aaaaabbbaa
+     */
+
     public static void yildizBoslukCizX(int yukseklik) {
 
-        for (int j = 1; j <=yukseklik ; j++) {
-            for (int i = 1; i <= yukseklik; i++) {
-                if (i == 1) {
+        for (int x = 1; x <= yukseklik; x++) {
+            for (int y = 1; y <= yukseklik; y++) {
+                if (x == y && y!=(yukseklik-y+1)) {
                     System.out.print("*");
-                } else {
-                    if (i == yukseklik) {
-                        System.out.print("");
-                    } else {
-                        System.out.print(" ");
-                    }
                 }
-                if (i == yukseklik) {
+                if(x!= y && x != (yukseklik-y+1)){
+                    System.out.print(" ");
+                }
+                if(x == (yukseklik-y+1)){
                     System.out.print("*");
                 }
             }
             System.out.println();
         }
+    }
 
-    public static void yildizBoslukCiz(int boyut) {
+        public static void yildizBoslukCiz(int boyut){
 
 
-        for (int i = 0; i < boyut ; i++) {
-            System.out.print("satir "+i+" = "  );
-            for (int j = 0; j < boyut ; j++) {
+            for (int i = 0; i < boyut; i++) {
+                System.out.print("satir " + i + " = ");
+                for (int j = 0; j < boyut; j++) {
 
                     if (i % 2 == 0) {
                         if (j % 2 == 0) {
-                            if (j==0){
-                                System.out.print("["+j+"]=x,");
-                            } else if(j==(boyut-1)){
-                                System.out.print("["+j+"]=y");
-                            }
-                            else {
-                                System.out.print("["+j+"]=*,");
+                            if (j == 0) {
+                                System.out.print("[" + j + "]=x,");
+                            } else if (j == (boyut - 1)) {
+                                System.out.print("[" + j + "]=y");
+                            } else {
+                                System.out.print("[" + j + "]=*,");
                             }
                         } else {
 
-                            if (j==boyut-1){
-                                System.out.print("["+j+"]=y");
-                            }
-                            else{
-                                System.out.print("["+j+"]=B,");
+                            if (j == boyut - 1) {
+                                System.out.print("[" + j + "]=y");
+                            } else {
+                                System.out.print("[" + j + "]=B,");
                             }
                         }
                     } else {
                         if (j % 2 == 0) {
 
-                            if (j==0){
-                                System.out.print("["+j+"]=x,");
+                            if (j == 0) {
+                                System.out.print("[" + j + "]=x,");
+                            } else if (j == (boyut - 1)) {
+                                System.out.print("[" + j + "]=y");
+                            } else {
+                                System.out.print("[" + j + "]=B,");
                             }
-                            else if(j==(boyut-1)){
-                                System.out.print("["+j+"]=y");
-                            }
-                            else{
-                                System.out.print("["+j+"]=B,");
-                            }
-                        }
-                        else {
+                        } else {
 
-                            if (j==boyut-1){
-                                System.out.print("["+j+"]=y");
-                            }
-                            else{
-                                System.out.print("["+j+"]=*,");
+                            if (j == boyut - 1) {
+                                System.out.print("[" + j + "]=y");
+                            } else {
+                                System.out.print("[" + j + "]=*,");
                             }
                         }
                     }
                 }
 
 
-            System.out.println();
-        }
+                System.out.println();
+            }
 
+        }
     }
-}
 
 

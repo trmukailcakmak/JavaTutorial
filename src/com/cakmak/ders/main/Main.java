@@ -14,11 +14,13 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        int yukseklik;
+        int yukseklik = 0;
         Scanner Giris = new Scanner(System.in);
-        System.out.print("yükseklik giriniz : ");
-        yukseklik = Giris.nextInt();
-        Main2.yildizBoslukCizX(yukseklik);
+        while(yukseklik!=100) {
+            System.out.print("yükseklik giriniz : ");
+            yukseklik = Giris.nextInt();
+            Main2.yildizBoslukCizX(yukseklik);
+        }
     }
        /* System.out.println("Main call edıldi.");
         yildizCiz(10);
