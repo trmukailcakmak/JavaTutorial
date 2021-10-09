@@ -2,7 +2,6 @@ package com.cakmak.ders.main;
 
 
 import com.cakmak.ders.geometri.*;
-import com.cakmak.ders.sort.Sortable;
 
 import java.util.Scanner;
 
@@ -19,8 +18,78 @@ public class Main {
         while(yukseklik!=100) {
             System.out.print("yükseklik giriniz : ");
             yukseklik = Giris.nextInt();
-            Main2.yildizBoslukCizX(yukseklik);
+            yildizBoslukCizX(yukseklik);
         }
+    }
+
+
+    public static void yildizBoslukCizX(int yukseklik) {
+
+        for (int x = 1; x <= yukseklik; x++) {
+            for (int y = 1; y <= yukseklik; y++) {
+                if (x == y && y!=(yukseklik-y+1)) {
+                    System.out.print("*");
+                }
+                if(x!= y && x != (yukseklik-y+1)){
+                    System.out.print(" ");
+                }
+                if(x == (yukseklik-y+1)){
+                    System.out.print("*");
+                }
+            }
+            System.out.println();
+        }
+    }
+
+    public static void yildizBoslukCiz(int boyut){
+
+
+        for (int i = 0; i < boyut; i++) {
+            System.out.print("satir " + i + " = ");
+            for (int j = 0; j < boyut; j++) {
+
+                if (i % 2 == 0) {
+                    if (j % 2 == 0) {
+                        if (j == 0) {
+                            System.out.print("[" + j + "]=x,");
+                        } else if (j == (boyut - 1)) {
+                            System.out.print("[" + j + "]=y");
+                        } else {
+                            System.out.print("[" + j + "]=*,");
+                        }
+                    } else {
+
+                        if (j == boyut - 1) {
+                            System.out.print("[" + j + "]=y");
+                        } else {
+                            System.out.print("[" + j + "]=B,");
+                        }
+                    }
+                } else {
+                    if (j % 2 == 0) {
+
+                        if (j == 0) {
+                            System.out.print("[" + j + "]=x,");
+                        } else if (j == (boyut - 1)) {
+                            System.out.print("[" + j + "]=y");
+                        } else {
+                            System.out.print("[" + j + "]=B,");
+                        }
+                    } else {
+
+                        if (j == boyut - 1) {
+                            System.out.print("[" + j + "]=y");
+                        } else {
+                            System.out.print("[" + j + "]=*,");
+                        }
+                    }
+                }
+            }
+
+
+            System.out.println();
+        }
+
     }
        /* System.out.println("Main call edıldi.");
         yildizCiz(10);
