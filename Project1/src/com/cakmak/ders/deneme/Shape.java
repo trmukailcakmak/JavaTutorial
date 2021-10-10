@@ -19,23 +19,22 @@ public class Shape {
             else if(dimension!=-1){
                 System.out.print("Yalnis Giris Lütfen Sadece Tek Sayı Girin : ");
             }
+
         }
 
     }
 
     public static void drawX(int dimension) {
         System.out.println("X CHARACTER STARTED TO BE DRAWN");
-        for (int x = 1; x <= dimension; x++) {
-            for (int y = 1; y <= dimension; y++) {
-                if (x == y && y != (dimension - y + 1)) {
+        for (int x = 0; x < dimension; x++) {
+            for (int y = 0; y < dimension; y++) {
+                if (x == y || y == (dimension - x - 1)) {
                     System.out.print("*");
                 }
-                if (x != y && x != (dimension - y + 1)) {
+                else {
                     System.out.print(" ");
                 }
-                if (x == (dimension - y + 1)) {
-                    System.out.print("*");
-                }
+
             }
             System.out.println();
         }

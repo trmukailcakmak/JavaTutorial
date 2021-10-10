@@ -25,16 +25,12 @@ public class Main {
 
     public static void yildizBoslukCizX(int yukseklik) {
 
-        for (int x = 1; x <= yukseklik; x++) {
-            for (int y = 1; y <= yukseklik; y++) {
-                if (x == y && y!=(yukseklik-y+1)) {
+        for (int x = 0; x < yukseklik; x++) {
+            for (int y = 0; y < yukseklik; y++) {
+                if (x==y || y==yukseklik-1-x){
                     System.out.print("*");
-                }
-                if(x!= y && x != (yukseklik-y+1)){
+                }else {
                     System.out.print(" ");
-                }
-                if(x == (yukseklik-y+1)){
-                    System.out.print("*");
                 }
             }
             System.out.println();
