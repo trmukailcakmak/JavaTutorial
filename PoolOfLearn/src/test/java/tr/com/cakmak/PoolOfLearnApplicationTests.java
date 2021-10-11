@@ -1,4 +1,4 @@
-package tr.com.cakmak.demo;
+package tr.com.cakmak;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
