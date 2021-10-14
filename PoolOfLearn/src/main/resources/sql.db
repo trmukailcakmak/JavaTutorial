@@ -23,6 +23,9 @@ VALUES (3,KULLANICITABLOSU , 'CAKMAK', 'HASAN', 'SELCUKLU MAHALLESI SOKAK : 1234
 INSERT INTO BOOK (ID, NAME, YAZAR,KULLANICI_ID)
 VALUES (5,'Writing Kitabi','Huseyin Demirtas',3);
 
+http://127.0.0.1:8080/rest/demo/test
+http://127.0.0.1:8080/rest/mydb
+
 
 select * from kullanicitablosu;
 select * from book;
