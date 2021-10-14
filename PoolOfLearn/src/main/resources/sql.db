@@ -1,0 +1,29 @@
+DROP TABLE KULLANICITABLOSU;
+
+CREATE TABLE KullaniciTablosu (
+    Kullanici_id int,
+    soyadi varchar(32),
+    isim varchar(32),
+    adres varchar(255),
+    sehir varchar(32),
+    PRIMARY KEY (Kullanici_id)
+);
+
+CREATE TABLE BOOK (
+    ID int,
+    NAME varchar(32),
+    YAZAR varchar(32),
+    KULLANICI_ID int,
+    PRIMARY KEY (ID)
+);
+
+INSERT INTO KULLANICITABLOSU (KULLANICI_ID, SOYADI, ISIM, ADRES,SEHIR)
+VALUES (3,KULLANICITABLOSU , 'CAKMAK', 'HASAN', 'SELCUKLU MAHALLESI SOKAK : 1234 NO:63','ISTANBUL');
+
+INSERT INTO BOOK (ID, NAME, YAZAR,KULLANICI_ID)
+VALUES (5,'Writing Kitabi','Huseyin Demirtas',3);
+
+
+select * from kullanicitablosu;
+select * from book;
+select * from book where kullanici_id=3;

@@ -12,6 +12,7 @@ import java.awt.*;
 @RequestMapping("/demo")
 public class DemoController {
 
+    //restfull web servisi
     @RequestMapping(
             value = {"/test","/test2"},
             method = {RequestMethod.GET,RequestMethod.POST},
@@ -20,7 +21,14 @@ public class DemoController {
     )
     @ResponseBody
     public String testMethod(){
-        return "Test";
+
+        String a = "";
+
+        for(int i=0;i<10;i++){
+            a  = a+ "<b style=\"background:red;color:white;\">Mukail</b> ";
+        }
+
+        return a;
     }
 
 }
