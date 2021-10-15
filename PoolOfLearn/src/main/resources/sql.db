@@ -1,5 +1,42 @@
 DROP TABLE KULLANICITABLOSU;
 
+
+CREATE TABLE SELLER(
+    ID int,
+    FULL_NAME varchar(64),
+    EMAIL varchar(96),
+    PASSWORD varchar(255),
+    PHONE varchar(32),
+    ADDRES_ID int,
+    FOOD_ID int,
+    PRIMARY KEY (ID)
+);
+
+CREATE TABLE FOOD(
+    ID int,
+    NAME varchar(32),
+    DESCRIPTION varchar(32),
+    FOOD_TYPE_ID varchar(32),
+    PRIMARY KEY (ID)
+);
+
+CREATE TABLE ADDRES(
+    ID int,
+    NAME varchar(32),
+    COUNTRY varchar(32),
+    CITY  varchar(32),
+    DISTRICT varchar(32),
+    NEIGHBOURHOOD varchar(32),
+    DETAIL varchar(255),
+    PRIMARY KEY (ID)
+);
+
+CREATE TABLE FOOD_TYPE(
+    ID int,
+    NAME varchar(32),
+    PRIMARY KEY (ID)
+);
+
 CREATE TABLE KullaniciTablosu (
     Kullanici_id int,
     soyadi varchar(32),
@@ -19,9 +56,25 @@ CREATE TABLE BOOK (
 
 INSERT INTO KULLANICITABLOSU (KULLANICI_ID, SOYADI, ISIM, ADRES,SEHIR)
 VALUES (3,KULLANICITABLOSU , 'CAKMAK', 'HASAN', 'SELCUKLU MAHALLESI SOKAK : 1234 NO:63','ISTANBUL');
-
+INSERT INTO FOOD(ID, NAME, DESCRIPTION,FOOD_TYPE_ID,SELLER_ID)
+VALUES (6,'Balık Çorbası','Karacadağın mercimekleriyle hazırlanmış enfes lezzet', 1, 2);
+UPDATE SELLER SET FULL_NAME='Mükail Çakmak' WHERE ID=1;
 INSERT INTO BOOK (ID, NAME, YAZAR,KULLANICI_ID)
 VALUES (5,'Writing Kitabi','Huseyin Demirtas',3);
+
+INSERT INTO ADDRES(ID, FULL_NAME, EMAIL, PHONE)
+VALUES (3,'Hasan CAKMAK', 'tr.hasancakmak@gmail.com', '5451014564');
+
+ALTER TABLE ADDRES
+RENAME TO ADDRESS;
+
+ALTER TABLE tablo_adi ADD kolon_adi alan_turu;
+ALTER TABLE tablo_adi DROP COLUMN kolon_adi;
+ALTER TABLE table_name MODIFY column_name datatype;
+ALTER TABLE FOOD ADD SELLER_ID int;
+
+INSERT INTO FOOD(ID, NAME, DESCRIPTION,FOOD_TYPE_ID,SELLER_ID)
+VALUES (1,'Kuru Fasulye','Salça Fasulye Biber bulunan sulu bir yemektir', 1, 1);
 
 http://127.0.0.1:8080/rest/demo/test
 http://127.0.0.1:8080/rest/mydb
@@ -30,3 +83,4 @@ http://127.0.0.1:8080/rest/mydb
 select * from kullanicitablosu;
 select * from book;
 select * from book where kullanici_id=3;
+

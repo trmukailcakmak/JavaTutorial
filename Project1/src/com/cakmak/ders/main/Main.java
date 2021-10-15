@@ -1,7 +1,7 @@
 package com.cakmak.ders.main;
 
 
-import com.cakmak.ders.geometri.*;
+import com.cakmak.denemeX.tryX;
 
 import java.util.Scanner;
 
@@ -20,12 +20,27 @@ public class Main {
             yukseklik = Giris.nextInt();
             yildizBoslukCizX(yukseklik);
         }
+
+
+
+
+
+
+
+
+        tryX a = new tryX("x");
+        tryXX(a);
+        System.out.println(a.name);
     }
 
+    public static void tryXX(tryX tryxx){
+        tryX aa = new tryX("y");
+    }
 
     public static void yildizBoslukCizX(int yukseklik) {
 
-        for (int x = 0; x < yukseklik; x++) {
+
+        /*for (int x = 0; x < yukseklik; x++) {
             for (int y = 0; y < yukseklik; y++) {
                 if (x==y || y==yukseklik-1-x){
                     System.out.print("*");
@@ -34,7 +49,7 @@ public class Main {
                 }
             }
             System.out.println();
-        }
+        }*/
     }
 
     public static void yildizBoslukCiz(int boyut){
