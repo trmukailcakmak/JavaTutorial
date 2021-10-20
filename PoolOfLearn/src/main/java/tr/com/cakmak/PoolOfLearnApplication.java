@@ -7,7 +7,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class PoolOfLearnApplication {
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(PoolOfLearnApplication.class, args);
+
+		System.out.println("Hello world!");
 	}
 
 }
